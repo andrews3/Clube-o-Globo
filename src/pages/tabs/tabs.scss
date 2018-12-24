@@ -1,0 +1,43 @@
+tabs-page {
+  ion-icon {
+    &[class*="custom-"] {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+      $sz: 20px;
+      width: $sz;
+      height: $sz;
+    }
+    &[class*="ticket"][ng-reflect-is-active="true"] {
+      background: url("../assets/icon/tab/ticket.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="ticket"][ng-reflect-is-active="false"] {
+      background: url("../assets/icon/tab/ticket-outline.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="restaurant"][ng-reflect-is-active="true"] {
+      background: url("../assets/icon/tab/restaurant.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="restaurant"][ng-reflect-is-active="false"] {
+      background: url("../assets/icon/tab/restaurant-outline.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="heart"][ng-reflect-is-active="true"] {
+      background: url("../assets/icon/tab/heart.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="heart"][ng-reflect-is-active="false"] {
+      background: url("../assets/icon/tab/heart-outline.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="user"][ng-reflect-is-active="true"] {
+      background: url("../assets/icon/tab/user.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="user"][ng-reflect-is-active="false"] {
+      background: url("../assets/icon/tab/user-outline.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+  }
+}

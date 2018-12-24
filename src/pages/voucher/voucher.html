@@ -1,0 +1,75 @@
+<ion-content class="container" text-center>
+
+  <button ion-button clear icon-left color="light" (click)="leave()">
+    <ion-icon name="ios-arrow-back"></ion-icon>
+    Voltar
+  </button>
+
+  <div style="width: 100%">
+    <ion-spinner *ngIf="!voucher.dataCriacao"></ion-spinner>
+  </div>
+
+  <div class="widget" *ngIf="voucher.dataCriacao">
+    <div class="top">
+      <div text-center>
+        <div class="logo-wrapper">
+          <img src="assets/imgs/clube-globo-logo.png" class="logo-size">
+        </div>
+
+        <div class="data-wrapper">
+          <div>Gerado em</div>
+          <div>{{getData(voucher.dataCriacao)}}</div>
+        </div>
+
+        <img [src]="voucher.parceiro.logoParceiro" class="logo-parceiro">
+
+        <div class="m10">
+          <div text-wrap class="bold large">{{voucher.parceiro.nomeParceiro}}</div>
+          <div text-wrap class="bold darkgrey">Desconto de {{voucher.desconto}}% na próxima compra
+          </div>
+        </div>
+
+        <div class="bold m10 red">
+          <div>Válido até</div>
+          <div>{{getData(voucher.dataValidade)}}</div>
+        </div>
+      </div>
+      <div class="informacao-wrapper">
+        <div text-center class="m10 large bold">Informações do Assinante</div>
+        <div class="m10 left">
+          <div class="placeholder-wrapper">
+            NOME
+          </div>
+          <div class="label-wrapper">
+            {{voucher.assinante.nomeAssinante}}
+          </div>
+        </div>
+        <div class="informacao-wrapper-bottom">
+          <div class="flex">
+            <div class="placeholder-wrapper">
+              CPF
+            </div>
+            <div class="label-wrapper">
+              {{getCpf(voucher.assinante.cpfAssinante)}}
+            </div>
+          </div>
+          <div class="flex">
+            <div class="placeholder-wrapper">
+              COD. DO ASSINANTE
+            </div>
+            <div class="label-wrapper">
+              {{voucher.assinante.codAssinante}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rip"></div>
+
+    <div class="bottom" text-center>
+      <img src="assets/imgs/barcode.jpg" class="barcode">
+    </div>
+    <br>
+  </div>
+</ion-content>

@@ -1,1 +1,20 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+  <ion-content>
+    <ion-row style="height: 15px">
+      <ion-col no-padding col-auto>
+        <button ion-button clear icon-only menuClose>
+          <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <img class="img-menu" src="assets/imgs/cg-fundo-branco.jpg">
+    <ion-list margin-top>
+      <div *ngFor="let page of pages" menuClose class="button-menu" (click)="openPage(page.component)">
+        <img [src]="page.img" class="icon-menu" item-start/>
+        <span class="text-menu">{{page.title}}</span>
+        <ion-icon name="ios-arrow-forward" color="secondary" item-end margin-right class="arrow-end"></ion-icon>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

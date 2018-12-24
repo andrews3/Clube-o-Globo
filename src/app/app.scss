@@ -1,5 +1,43 @@
 // http://ionicframework.com/docs/theming/
 
+.img-menu {
+  width: calc(100% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.icon-menu {
+  width: 14px;
+  height: 14px;
+  margin-left: 30px;
+}
+
+.text-menu {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 20px;
+  margin-left: 10px;
+  color: map_get($colors, secondary);
+
+}
+
+.button-menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px;
+}
+
+.arrow-end {
+  font-size: medium;
+  position: absolute;
+  right: 20px;
+}
 
 // App Global Sass
 // --------------------------------------------------
